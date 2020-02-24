@@ -36,4 +36,7 @@ using SpecialFunctions
 
     @test eps(Sym) == 0
     #@test rewrite(sinc(x), "jn") == jn(0, PI * x)
+
+    @test abs2(x) == conj(x)*x
+    @test abs(x) == sqrt(conj(x)*x)
 end
